@@ -19,5 +19,5 @@ const comentarioCancionSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("ComentarioCancion", comentarioSchema);
+module.exports = mongoose.model("ComentarioCancion", comentarioCancionSchema);
 
