@@ -24,7 +24,7 @@ app.get('/api/colaboraciones', (request, response)=>{
 })
 
 app.use('/api/artistas', require('./routes/artistaRoutes'))
-app.get('/api/colaboraciones', (request, response)=>{
+app.get('/api/artistas', (request, response)=>{
     response.send('Obtener Artistas')
 })
 
