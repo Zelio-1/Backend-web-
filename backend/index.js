@@ -28,6 +28,11 @@ app.get('/api/artistas', (request, response)=>{
     response.send('Obtener Artistas')
 })
 
+app.use('/api/comentariosCanciones', require('./routes/comentariosCancionesRoutes'));
+app.get('/api/comentariosCanciones', (request, response)=>{
+    response.send('Obtener comentarios por cancion')
+})
+
 app.use (errorHandler)
 
 app.listen(port, ()=> console.log(`Servidor iniciando en el puerto ${port}`))
