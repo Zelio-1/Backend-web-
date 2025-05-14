@@ -27,12 +27,12 @@ const crearComentarioPorCancion = asyncHandler(async (request, response) => {
 
 
 const updateComentarioPorCancion = asyncHandler(async (req, res) => {
-  const comentario = await Comentario_modelo.findById(req.params.id);
+  const comentario = await ComentariosPorCancion.findById(req.params.id);
   if (!comentario) {
     res.status(404);
     throw new Error('Comentario no encontrado');
   }
-  const actualizado = await Comentario_modelo.findByIdAndUpdate(req.params.id, req.body, { new: true });
+  const actualizado = await ComentariosPorCancion.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.status(200).json({ actualizado });
 });
 
