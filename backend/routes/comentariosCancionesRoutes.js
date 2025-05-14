@@ -13,6 +13,6 @@ router.get('/:idCancion', getComentariosPorCancion);
 router.get('/', getAllComentarioPorCancion);
 router.post('/', crearComentarioPorCancion);
 router.put('/:id', updateComentarioPorCancion);
-router.delete('/:idC', eliminarComentarioPorCancion);
+router.delete('/:id', eliminarComentarioPorCancion);
 
 module.exports = router;
