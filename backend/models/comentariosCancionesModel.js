@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const comentarioCancionSchema = mongoose.Schema({
+const comentarioCancioneSchema = mongoose.Schema({
   texto: {
     type: String,
     required: true
@@ -13,5 +13,5 @@ const comentarioCancionSchema = mongoose.Schema({
     timestamps: true 
 });
 
-module.exports = mongoose.model("ComentarioCancione", comentarioCancionSchema);
+module.exports = mongoose.model("ComentarioCancione", comentarioCancioneSchema);
 
