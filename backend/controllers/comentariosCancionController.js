@@ -1,6 +1,10 @@
 const asyncHandler = require('express-async-handler');
 const ComentariosPorCancion = require('../models/comentariosCancionesModel');
 
+const getAllComentarioPorCancion =  asyncHandler(async(request, response) =>{
+    const comentarios = await ComentariosPorCancion.find({})
+    response.status (200).json({comentarios})
+})
 
 const getComentariosPorCancion = asyncHandler(async (req, res) => {
   const comentarios = await ComentariosPorCancion.find({ idCancion: req.params.idCancion });
@@ -50,6 +54,7 @@ const eliminarComentarioPorCancion = asyncHandler(async (req, res) => {
 
 module.exports = {
   getComentariosPorCancion,
+  getAllComentarioPorCancion, 
   crearComentarioPorCancion,
   updateComentarioPorCancion,
   eliminarComentarioPorCancion
