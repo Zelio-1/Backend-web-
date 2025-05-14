@@ -6,11 +6,11 @@ const comentarioCancionSchema = mongoose.Schema({
     required: true
   },
   correo: {
-    type: Number,
+    type: String,
     required: true
   },
   idCancion: {
-    type: String,
+    type: Number,
     required: true
   },
   nombreArtista: {
