@@ -13,5 +13,5 @@ const comentarioCancionSchema = mongoose.Schema({
     timestamps: true 
 });
 
-module.exports = mongoose.model("ComentarioCancion", comentarioCancionSchema);
+module.exports = mongoose.model("ComentarioCancione", comentarioCancionSchema);
 
