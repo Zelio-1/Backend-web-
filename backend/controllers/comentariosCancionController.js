@@ -17,7 +17,7 @@ const crearComentarioPorCancion = asyncHandler(async (request, response) => {
         throw new Error("Escriba el ID de la canción");
     }
 
-    const comentario = await ComentarioCancion.create({
+    const comentario = await ComentariosPorCancion.create({
         texto: request.body.texto,
         idCancion: request.body.idCancion
     });
